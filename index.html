@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trung Tâm Đào Tạo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">TTĐT</div>
+        <nav>
+            <a href="#">Trang chủ</a>
+            <a href="#courses">Khóa học</a>
+            <a href="#">Giảng viên</a>
+            <a href="#">Học phí</a>
+            <a href="#register">Đăng ký</a>
+        </nav>
+        <button class="btn-theme" onclick="toggleDarkMode()">DarkMode / LightMode</button>
+    </header>
+    <section class="banner">
+        <h1 class="animate__animated animate__fadeInDown">Chào Mừng Đến Với Trung Tâm Đào Tạo</h1>
+        <p class="animate__animated animate__fadeInUp">Nâng tầm tương lai</p>
+        <div class="banner-img-container">
+            <img src="doggo.jpg" alt="Lớp học" class="banner-img">
+        </div>
+        <button class="btn-primary animate__animated animate__bounce" onclick="location.href='#courses'">Xem khóa học</button>
+    </section>
+    <section id="courses" class="courses-section">
+        <h2 class="section-title">Danh Sách Khóa Học</h2>
+        <div class="courses-grid animate__animated animate__fadeIn">
+            <div class="course-card">
+                <img src="rab.jpg" alt="Khóa học 1">
+                <h3>Khóa Học 1</h3>
+                <p><strong>Thời lượng:</strong> 3 tháng</p>
+                <p><strong>Học phí:</strong> 3.500.000đ</p>
+            </div>
+            <div class="course-card">
+                <img src="cat.jpg" alt="Khóa học 2">
+                <h3>Khóa Học 2</h3>
+                <p><strong>Thời lượng:</strong> 2.5 tháng</p>
+                <p><strong>Học phí:</strong> 3.000.000đ</p>
+            </div>
+            <div class="course-card">
+                <img src="brea.jpg" alt="Khóa học 3">
+                <h3>Khóa Học 3</h3>
+                <p><strong>Thời lượng:</strong> 2 tháng</p>
+				<p><strong>Học phí:</strong> 2.800.000đ</p>
+            </div>
+            <div class="course-card">
+                <img src="monke.jpg" alt="Khóa học 4">
+                <h3>Khóa Học 4</h3>
+                <p><strong>Thời lượng:</strong> 4 tháng</p>
+                <p><strong>Học phí:</strong> 4.500.000đ</p>
+            </div>
+            <div class="course-card">
+                <img src="chimken.jpg" alt="Khóa học 5">
+                <h3>Khóa Học 5</h3>
+                <p><strong>Thời lượng:</strong> 3 tháng</p>
+                <p><strong>Học phí:</strong> 4.000.000đ</p>
+            </div>
+            <div class="course-card">
+                <img src="fih.jpg" alt="Khóa học 6">
+                <h3>Khóa Học 6</h3>
+                <p><strong>Thời lượng:</strong> 3.5 tháng</p>
+                <p><strong>Học phí:</strong> 3.800.000đ</p>
+            </div>
+        </div>
+    </section>
+    <section id="register" class="form-section">
+        <h2 class="section-title">Đăng Ký Khóa Học</h2>
+        <form class="register-form">
+            <div class="form-group">
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" id="fullname" placeholder="Nguyễn Văn A" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Ngày sinh:</label>
+                <input type="date" id="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="example@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Điện thoại:</label>
+                <input type="tel" id="phone" placeholder="0123456789" required>
+            </div>
+
+            <div class="form-group">
+                <label>Trình độ hiện tại:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="level" value="start" checked> Mới bắt đầu</label>
+                    <label><input type="radio" name="level" value="basic"> Đã biết cơ bản</label>
+                    <label><input type="radio" name="level" value="advanced"> Nâng cao</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+				<label for="course-select">Khóa muốn học:</label>
+                <select id="course-select" required>
+                    <option value="">-- Chọn khóa học --</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Ca học phù hợp:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="schedule" value="morning"> Sáng</label>
+                    <label><input type="checkbox" name="schedule" value="afternoon"> Chiều</label>
+                    <label><input type="checkbox" name="schedule" value="evening"> Tối</label>
+                    <label><input type="checkbox" name="schedule" value="weekend"> Cuối tuần</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="goal">Mục tiêu học tập:</label>
+                <textarea id="goal" rows="4" placeholder="Nhập mục tiêu học tập của bạn..."></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="btn-submit">Đăng ký</button>
+                <button type="reset" class="btn-reset">Nhập lại</button>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <p><strong>Địa chỉ:</strong> 123 Đường ABC, Thành phố XYZ | <strong>Email:</strong> contact@trungtam.edu.vn | <strong>Hotline:</strong> 0123 456 789</p>
+        <p>&copy; 2026 Bản quyền thuộc về Trung Tâm Đào Tạo.</p>
+    </footer>
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+            }
+        }
+    </script>
+</body>
+</html>
